@@ -1,0 +1,7 @@
+interface:
+  display_name: "WAB Brand Diagnosis"
+  short_description: "Evidence-aware AI-native brand diagnosis"
+  default_prompt: "Use $wab-diagnose-brand to identify the real brand bottleneck, separate evidence from assumptions, and recommend the next decision."
+  icon_small: "./assets/win-logo-square.png"
+  icon_large: "./assets/win-logo-black.png"
+  brand_color: "#0A0A0A"

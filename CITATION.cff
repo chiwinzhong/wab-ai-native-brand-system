@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or discuss this project, please cite it using the metadata below."
+title: "WAB: AI-Native Brand Diagnosis"
+type: software
+authors:
+  - family-names: Zhong
+    given-names: Zhiying
+version: 0.1.0
+date-released: 2026-08-18
+license: Apache-2.0
+abstract: "An evidence-aware Agent Skill for turning brand inputs into a bounded decision, auditable diagnosis, and governed next-action path."
+keywords:
+  - agent-skill
+  - ai-native
+  - brand-strategy
+  - organizational-capability
+  - evidence-aware-ai

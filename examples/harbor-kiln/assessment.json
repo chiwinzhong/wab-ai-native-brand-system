@@ -1,0 +1,161 @@
+{
+  "assessment_version": "1.0",
+  "brand": {
+    "name": "Harbor Kiln",
+    "scope": "Commercial ceramic tableware for independent restaurants",
+    "geography": "Fictional market"
+  },
+  "decision": "Decide whether to lead with sustainability, design flexibility, or operating durability in the next sales cycle.",
+  "research_status": {
+    "status": "complete",
+    "access_date": "2026-08-18",
+    "degradation_reasons": [
+      "All sources and observations are synthetic and exist only to demonstrate the WAB data contract."
+    ]
+  },
+  "evidence_ledger": [
+    {
+      "id": "E01",
+      "type": "management_claim",
+      "summary": "The founder describes Harbor Kiln as the most sustainable option for design-led restaurants.",
+      "strength": "weak",
+      "source": "Synthetic founder interview",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E02",
+      "type": "public_observation",
+      "summary": "The synthetic homepage leads with custom design and does not explain how sustainability is measured.",
+      "strength": "medium",
+      "source": "https://harbor-kiln.example.invalid/",
+      "status": "supported"
+    },
+    {
+      "id": "E03",
+      "type": "public_observation",
+      "summary": "The synthetic product page documents batch replacement and glaze matching but does not connect these features to restaurant operating cost.",
+      "strength": "medium",
+      "source": "https://harbor-kiln.example.invalid/products",
+      "status": "supported"
+    },
+    {
+      "id": "E04",
+      "type": "gap",
+      "summary": "No current evidence supports a comparative claim of being the most sustainable option.",
+      "strength": "strong",
+      "source": "Synthetic evidence review",
+      "status": "missing"
+    },
+    {
+      "id": "E05",
+      "type": "customer_signal",
+      "summary": "Three synthetic buyer interviews prioritize reliable replacement and visual consistency over an abstract sustainability promise.",
+      "strength": "medium",
+      "source": "Synthetic buyer interview notes",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E06",
+      "type": "gap",
+      "summary": "Product facts and approval decisions are stored in individual messages rather than a governed source of truth.",
+      "strength": "medium",
+      "source": "Synthetic workflow review",
+      "status": "missing"
+    }
+  ],
+  "lens_scores": {
+    "position_and_difference": {
+      "score": 1,
+      "rationale": "The lead claim is not proportionate to current proof and differs from the most concrete operating advantage.",
+      "evidence_ids": ["E01", "E02", "E04"]
+    },
+    "audience_and_choice_barrier": {
+      "score": 2,
+      "rationale": "Independent restaurant buyers are defined and the replacement-risk barrier is emerging, but the sample is still synthetic and small.",
+      "evidence_ids": ["E05"]
+    },
+    "proof_and_credibility": {
+      "score": 1,
+      "rationale": "Operational features are visible, while the strongest public claim lacks a measurable basis.",
+      "evidence_ids": ["E03", "E04"]
+    },
+    "experience_and_consistency": {
+      "score": 2,
+      "rationale": "The design experience is coherent, but the homepage promise and buyer priorities are not aligned.",
+      "evidence_ids": ["E02", "E05"]
+    },
+    "knowledge_and_workflow": {
+      "score": 1,
+      "rationale": "Important facts and approvals remain person-dependent and difficult to reuse.",
+      "evidence_ids": ["E06"]
+    },
+    "commercial_signal_and_learning": {
+      "score": 1,
+      "rationale": "The current signals are interview observations rather than verified purchasing or retention evidence.",
+      "evidence_ids": ["E05"]
+    }
+  },
+  "primary_bottleneck": {
+    "lens": "proof_and_credibility",
+    "statement": "Harbor Kiln is leading with a comparative sustainability claim that its current evidence cannot carry.",
+    "why_first": "Generating more content around the unsupported claim would scale credibility risk, while the brand already has a more concrete operating advantage to validate.",
+    "evidence_ids": ["E03", "E04", "E05"]
+  },
+  "differentiation_hypothesis": {
+    "statement": "Harbor Kiln helps design-led independent restaurants keep tableware visually consistent through repairable, batch-matchable ceramic serviceware.",
+    "gates": {
+      "true": {
+        "result": "partial",
+        "rationale": "Batch replacement and glaze matching are documented in the synthetic product record, but repairability needs confirmation.",
+        "evidence_ids": ["E03"]
+      },
+      "relevant": {
+        "result": "pass",
+        "rationale": "Synthetic buyers describe replacement reliability and visual consistency as meaningful operating concerns.",
+        "evidence_ids": ["E05"]
+      },
+      "ownable": {
+        "result": "partial",
+        "rationale": "No structured alternative review has yet shown whether competitors make and prove the same promise.",
+        "evidence_ids": ["E04"]
+      },
+      "deliverable": {
+        "result": "partial",
+        "rationale": "The product capability appears plausible, while process ownership and knowledge continuity remain weak.",
+        "evidence_ids": ["E03", "E06"]
+      }
+    },
+    "evidence_needed": [
+      "Approved definition and proof of repairability",
+      "Competitor and substitute comparison",
+      "Replacement-time and batch-match records from authorized customer cases"
+    ]
+  },
+  "next_30_days": {
+    "priority": "Replace the unsupported comparative claim with a testable operating-value hypothesis.",
+    "actions": [
+      "Approve a precise definition of batch matching and repairability.",
+      "Review five realistic alternatives for the same buyer decision.",
+      "Interview five authorized restaurant buyers about replacement risk and visual consistency.",
+      "Create one sales page and one sales conversation using the bounded hypothesis.",
+      "Record objections, inquiries, and proof requests without treating them as causality."
+    ],
+    "human_decisions": [
+      "Founder approves the factual product definition.",
+      "Sales owner selects the priority buyer segment.",
+      "Authorized reviewer approves any customer evidence used publicly."
+    ],
+    "do_not_automate": [
+      "Do not publish the most-sustainable comparative claim.",
+      "Do not infer customer results from synthetic or unaudited records.",
+      "Do not update formal product facts without an authorized owner."
+    ],
+    "advance_condition": "Advance when the product definition is approved, the alternative review is complete, and at least three independent buyer signals support the operating-value hypothesis."
+  },
+  "commercial_route": "professional_diagnosis",
+  "limitations": [
+    "Harbor Kiln is fictional.",
+    "All evidence is synthetic and demonstrates structure rather than market truth.",
+    "The assessment does not predict sales or establish causality."
+  ]
+}

@@ -1,0 +1,39 @@
+name: Validate WAB Skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Skill package
+        run: python3 tools/validate_skill_package.py
+
+      - name: Validate reference assessment
+        run: >-
+          python3 skills/wab-diagnose-brand/scripts/validate_assessment.py
+          examples/harbor-kiln/assessment.json
+
+      - name: Run positive and negative contract tests
+        run: >-
+          python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py
+          examples/harbor-kiln/assessment.json
+
+      - name: Compile Python and parse JSON
+        run: |
+          python3 -m py_compile skills/wab-diagnose-brand/scripts/*.py tools/*.py
+          python3 -m json.tool skills/wab-diagnose-brand/references/brand-assessment.schema.json >/dev/null
+          python3 -m json.tool examples/harbor-kiln/assessment.json >/dev/null

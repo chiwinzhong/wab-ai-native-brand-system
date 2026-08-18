@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/wab/brand-assessment.schema.json",
+  "title": "WAB Brand Assessment",
+  "type": "object",
+  "required": [
+    "assessment_version",
+    "brand",
+    "decision",
+    "research_status",
+    "evidence_ledger",
+    "lens_scores",
+    "primary_bottleneck",
+    "differentiation_hypothesis",
+    "next_30_days",
+    "commercial_route",
+    "limitations"
+  ],
+  "properties": {
+    "assessment_version": {"const": "1.0"},
+    "brand": {
+      "type": "object",
+      "required": ["name", "scope", "geography"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "geography": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "decision": {"type": "string", "minLength": 1},
+    "research_status": {
+      "type": "object",
+      "required": ["status", "access_date", "degradation_reasons"],
+      "properties": {
+        "status": {"enum": ["complete", "partial", "degraded", "blocked"]},
+        "access_date": {"type": "string", "format": "date"},
+        "degradation_reasons": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "evidence_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "summary", "strength", "source", "status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^E[0-9]{2,}$"},
+          "type": {"enum": ["confirmed_fact", "public_observation", "management_claim", "customer_signal", "agent_hypothesis", "conflict", "gap"]},
+          "summary": {"type": "string", "minLength": 1},
+          "strength": {"enum": ["strong", "medium", "weak"]},
+          "source": {"type": "string", "minLength": 1},
+          "status": {"enum": ["supported", "needs_confirmation", "conflicting", "stale", "inaccessible", "missing"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "lens_scores": {
+      "type": "object",
+      "required": ["position_and_difference", "audience_and_choice_barrier", "proof_and_credibility", "experience_and_consistency", "knowledge_and_workflow", "commercial_signal_and_learning"],
+      "additionalProperties": false,
+      "properties": {
+        "position_and_difference": {"$ref": "#/$defs/lens"},
+        "audience_and_choice_barrier": {"$ref": "#/$defs/lens"},
+        "proof_and_credibility": {"$ref": "#/$defs/lens"},
+        "experience_and_consistency": {"$ref": "#/$defs/lens"},
+        "knowledge_and_workflow": {"$ref": "#/$defs/lens"},
+        "commercial_signal_and_learning": {"$ref": "#/$defs/lens"}
+      }
+    },
+    "primary_bottleneck": {
+      "type": "object",
+      "required": ["lens", "statement", "why_first", "evidence_ids"],
+      "properties": {
+        "lens": {"type": "string"},
+        "statement": {"type": "string", "minLength": 1},
+        "why_first": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "differentiation_hypothesis": {
+      "type": "object",
+      "required": ["statement", "gates", "evidence_needed"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 1},
+        "gates": {
+          "type": "object",
+          "required": ["true", "relevant", "ownable", "deliverable"],
+          "additionalProperties": false,
+          "properties": {
+            "true": {"$ref": "#/$defs/gate"},
+            "relevant": {"$ref": "#/$defs/gate"},
+            "ownable": {"$ref": "#/$defs/gate"},
+            "deliverable": {"$ref": "#/$defs/gate"}
+          }
+        },
+        "evidence_needed": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "next_30_days": {
+      "type": "object",
+      "required": ["priority", "actions", "human_decisions", "do_not_automate", "advance_condition"],
+      "properties": {
+        "priority": {"type": "string", "minLength": 1},
+        "actions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "human_decisions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "do_not_automate": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "advance_condition": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "commercial_route": {"enum": ["open_self_serve", "professional_diagnosis", "enterprise_system"]},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  },
+  "$defs": {
+    "lens": {
+      "type": "object",
+      "required": ["score", "rationale", "evidence_ids"],
+      "properties": {
+        "score": {"type": "integer", "minimum": 0, "maximum": 3},
+        "rationale": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "gate": {
+      "type": "object",
+      "required": ["result", "rationale", "evidence_ids"],
+      "properties": {
+        "result": {"enum": ["pass", "partial", "fail"]},
+        "rationale": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
