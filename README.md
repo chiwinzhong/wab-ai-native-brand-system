@@ -8,7 +8,7 @@ WAB is an evidence-aware Agent Skill that turns scattered brand claims, public m
 
 This repository contains the open diagnostic layer of the broader **W AI Branding (WAB)** system.
 
-**Status:** Public preview · synthetic validation only · no claim of market or business-result validation
+**Status:** Public preview · synthetic contract validation plus one owner-authorized exploratory field case · no claim of independent business-result validation
 
 ## The problem
 
@@ -104,12 +104,18 @@ python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py \
   examples/harbor-kiln/assessment.json
 ```
 
-## Example
+## Examples and exploratory cases
 
 The repository includes a fully synthetic example for **Harbor Kiln**, a fictional commercial tableware brand. It demonstrates the data contract without exposing a real customer, private evidence, or invented market results.
 
 - [Synthetic assessment](examples/harbor-kiln/assessment.json)
 - [Human-readable diagnosis](examples/harbor-kiln/diagnosis.md)
+
+The first owner-authorized exploratory case examines **Daddy Asks**, a founder-owned parenting content and knowledge project. It demonstrates how recurring editorial judgment can become governed, reusable AI capability. System artifacts are owner-inspectable; performance figures remain management-reported until redacted source review.
+
+- [Exploratory field case](case-studies/daddy-asks/README.md)
+- [Evidence and privacy boundary](case-studies/daddy-asks/evidence-boundary.md)
+- [Machine-readable assessment](case-studies/daddy-asks/assessment.json)
 
 ## Six diagnostic lenses
 
@@ -181,6 +187,10 @@ The public validation method is documented in [Evaluation protocol](docs/evaluat
 │   └── security-and-privacy.md
 ├── examples/
 │   └── harbor-kiln/
+├── case-studies/
+│   └── daddy-asks/
+├── distribution/
+│   └── daddy-asks/
 └── skills/
     └── wab-diagnose-brand/
         ├── SKILL.md
@@ -192,11 +202,11 @@ The public validation method is documented in [Evaluation protocol](docs/evaluat
 
 ## Release and evidence status
 
-The open Skill is derived from a larger internally tested WAB workflow with structured schemas, failure gates, and synthetic end-to-end tests. This repository must still be independently validated as a public package before its first release.
+Version 0.1.0 has been released with structured schemas, failure gates, and synthetic end-to-end tests. The Daddy Asks package adds an owner-authorized exploratory field case, but it is not independent customer or business-impact validation.
 
-Until real authorized usage is documented, describe the project as:
+Until independently reviewed field evidence is documented, describe the project as:
 
-> An open, evidence-aware brand-diagnosis Skill in private preview, available for critique and field validation.
+> An open, evidence-aware brand-diagnosis Skill in public preview, available for critique and field validation.
 
 Do not describe it as academically validated, universally applicable, or proven to improve business performance.
 

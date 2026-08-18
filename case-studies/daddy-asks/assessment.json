@@ -1,0 +1,209 @@
+{
+  "assessment_version": "1.0",
+  "brand": {
+    "name": "爸爸每事问 (Daddy Asks)",
+    "scope": "Chinese-language parenting content, knowledge, and assistant workflows",
+    "geography": "China"
+  },
+  "decision": "Decide whether the international public case should lead with parenting-content scale, AI efficiency, or the conversion of founder judgment into a governed and reusable knowledge system.",
+  "research_status": {
+    "status": "partial",
+    "access_date": "2026-08-18",
+    "degradation_reasons": [
+      "System artifacts were reviewed from owner-authorized internal records, while performance metrics have not yet been checked against redacted primary account records.",
+      "The article index contains a disclosed 131-versus-129 summary conflict.",
+      "No controlled comparison isolates AI from publishing frequency, topic quality, platform distribution, or external events."
+    ]
+  },
+  "evidence_ledger": [
+    {
+      "id": "E01",
+      "type": "confirmed_fact",
+      "summary": "Daddy Asks is a founder-owned Chinese-language parenting content project with a formal operating source.",
+      "strength": "strong",
+      "source": "Owner-authorized project overview and governance records",
+      "status": "supported"
+    },
+    {
+      "id": "E02",
+      "type": "conflict",
+      "summary": "The current project overview and unique article-ID count indicate 131 effective articles, while one summary table in the article index still says 129.",
+      "strength": "strong",
+      "source": "Owner-authorized project overview and formal article index",
+      "status": "conflicting"
+    },
+    {
+      "id": "E03",
+      "type": "confirmed_fact",
+      "summary": "The project has a versioned main writing rule, separate channel rules, formal source and index boundaries, task locks, review records, and publication gates.",
+      "strength": "strong",
+      "source": "Owner-authorized operating artifacts",
+      "status": "supported"
+    },
+    {
+      "id": "E04",
+      "type": "confirmed_fact",
+      "summary": "The project has five reusable topic modules, a question router, multiple Skill specifications, and a discoverable Codex Skill.",
+      "strength": "strong",
+      "source": "Owner-authorized knowledge and Skill artifacts",
+      "status": "supported"
+    },
+    {
+      "id": "E05",
+      "type": "confirmed_fact",
+      "summary": "A productization matrix maps twelve approved content assets into five modules and candidate Skill, course, book, and video uses.",
+      "strength": "medium",
+      "source": "Owner-authorized productization matrix",
+      "status": "supported"
+    },
+    {
+      "id": "E06",
+      "type": "management_claim",
+      "summary": "The owner reports that direct founder time per article declined from roughly 30 minutes to roughly 5 minutes.",
+      "strength": "weak",
+      "source": "Owner retrospective",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E07",
+      "type": "management_claim",
+      "summary": "The owner reports roughly 3,400 followers, recent articles often above 1,000 reads, and one article above 80,000 reads.",
+      "strength": "weak",
+      "source": "Owner retrospective",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E08",
+      "type": "management_claim",
+      "summary": "The owner reports recurring reader questions and early brand-collaboration inquiries.",
+      "strength": "weak",
+      "source": "Owner retrospective",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E09",
+      "type": "management_claim",
+      "summary": "The owner reports approximately RMB 600 in early platform revenue over a three-month period.",
+      "strength": "weak",
+      "source": "Owner retrospective",
+      "status": "needs_confirmation"
+    },
+    {
+      "id": "E10",
+      "type": "gap",
+      "summary": "No controlled baseline isolates AI, publishing frequency, topic quality, platform distribution, and external events.",
+      "strength": "strong",
+      "source": "Current evidence review",
+      "status": "missing"
+    },
+    {
+      "id": "E11",
+      "type": "agent_hypothesis",
+      "summary": "The most defensible differentiation is governed judgment continuity rather than automated writing volume.",
+      "strength": "medium",
+      "source": "WAB exploratory assessment",
+      "status": "needs_confirmation"
+    }
+  ],
+  "lens_scores": {
+    "position_and_difference": {
+      "score": 2,
+      "rationale": "The parenting point of view and governed workflow are clear, while international relevance and realistic alternatives remain untested.",
+      "evidence_ids": ["E01", "E03", "E04", "E11"]
+    },
+    "audience_and_choice_barrier": {
+      "score": 1,
+      "rationale": "The Chinese parent audience is known internally, but the global case reader and desired next action still need direct validation.",
+      "evidence_ids": ["E07", "E08", "E10"]
+    },
+    "proof_and_credibility": {
+      "score": 1,
+      "rationale": "Operating artifacts are strong, while performance and efficiency claims lack a reviewed public evidence pack and the count conflict remains open.",
+      "evidence_ids": ["E02", "E03", "E06", "E07", "E08", "E09", "E10"]
+    },
+    "experience_and_consistency": {
+      "score": 2,
+      "rationale": "Writing, modules, channel rules, and review gates are structured, but public cross-platform consistency has not yet been audited.",
+      "evidence_ids": ["E03", "E04", "E05"]
+    },
+    "knowledge_and_workflow": {
+      "score": 3,
+      "rationale": "Sources, rules, tasks, approvals, routing, and reusable capability are versioned and governed beyond a single draft.",
+      "evidence_ids": ["E03", "E04", "E05"]
+    },
+    "commercial_signal_and_learning": {
+      "score": 1,
+      "rationale": "Early reach, inquiry, collaboration, and revenue signals are management-reported, small, and not causally attributable.",
+      "evidence_ids": ["E07", "E08", "E09", "E10"]
+    }
+  },
+  "primary_bottleneck": {
+    "lens": "proof_and_credibility",
+    "statement": "The internal operating system is more mature than the public evidence layer needed to support efficiency, audience, or business claims.",
+    "why_first": "Leading with large numbers or productivity claims before reconciling counts and reviewing primary records would create avoidable credibility and privacy risk.",
+    "evidence_ids": ["E02", "E06", "E07", "E08", "E09", "E10"]
+  },
+  "differentiation_hypothesis": {
+    "statement": "Daddy Asks turns a father's recurring judgment from real parenting moments into a governed knowledge system that can produce consistent content, answer recurring questions, and seed reusable Skills without removing human responsibility for truth, privacy, or final publication.",
+    "gates": {
+      "true": {
+        "result": "partial",
+        "rationale": "The operating artifacts support governed reuse, while performance effects are not independently verified.",
+        "evidence_ids": ["E03", "E04", "E05", "E10"]
+      },
+      "relevant": {
+        "result": "partial",
+        "rationale": "The problem is plausible for expert creators and AI operators, but direct global audience evidence is missing.",
+        "evidence_ids": ["E08", "E10", "E11"]
+      },
+      "ownable": {
+        "result": "partial",
+        "rationale": "The combination appears distinctive, but no structured comparison with creator-AI alternatives has been completed.",
+        "evidence_ids": ["E10", "E11"]
+      },
+      "deliverable": {
+        "result": "pass",
+        "rationale": "The project already operates with formal sources, rules, modules, review gates, and Skill assets.",
+        "evidence_ids": ["E03", "E04", "E05"]
+      }
+    },
+    "evidence_needed": [
+      "A reconciled and frozen article index",
+      "Ten comparable before-and-after human-time samples",
+      "Redacted primary records for reach, inquiries, collaborations, and revenue",
+      "A structured comparison with realistic creator-AI alternatives",
+      "Independent review of evidence traceability and required human correction"
+    ]
+  },
+  "next_30_days": {
+    "priority": "Build a privacy-safe, reproducible evidence pack before leading with productivity or business outcomes.",
+    "actions": [
+      "Reconcile the article index and freeze a redacted evidence snapshot.",
+      "Measure ten comparable articles using one definition of human work.",
+      "Redact and review platform records for reach, questions, collaborations, and revenue.",
+      "Compare one WAB-guided output with a baseline using the same source packet, model, and time budget.",
+      "Ask an independent operator to assess evidence traceability, unsupported claims, and required human edits."
+    ],
+    "human_decisions": [
+      "Zhiying Zhong approves every public metric, redaction, and case claim.",
+      "A privacy reviewer confirms that no child, family, or reader can be re-identified.",
+      "An independent operator decides whether the evidence trail is reproducible enough to call the case field-validated."
+    ],
+    "do_not_automate": [
+      "Do not publish family stories, images, consultations, or account records without item-level approval.",
+      "Do not infer a child's inner state or diagnose a parenting or mental-health condition.",
+      "Do not promote one correction into a permanent project rule without owner confirmation.",
+      "Do not attribute reach, inquiries, or revenue to AI without an adequate comparison design.",
+      "Do not publish or update formal knowledge without a named human decision-maker."
+    ],
+    "advance_condition": "Advance when the count conflict is resolved, the owner approves a redacted evidence pack, and an independent reviewer can reproduce the evidence trail without access to private family data."
+  },
+  "commercial_route": "professional_diagnosis",
+  "limitations": [
+    "Daddy Asks is owned by the WAB creator, so this case is not independent customer validation.",
+    "Performance and efficiency metrics remain management-reported until primary records are reviewed.",
+    "No controlled comparison establishes causality.",
+    "No child, family, reader, or partner identity is included in the public assessment.",
+    "The assessment does not provide parenting, medical, mental-health, legal, or financial advice."
+  ]
+}

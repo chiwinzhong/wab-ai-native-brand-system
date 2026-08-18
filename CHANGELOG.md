@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- add the owner-authorized Daddy Asks exploratory field case;
+- add a public evidence and privacy boundary;
+- add a schema-valid machine-readable WAB assessment;
+- add Substack, LinkedIn, and X distribution drafts;
+- keep performance and business signals explicitly management-reported pending source review.
+
 ## 0.1.0 — 2026-08-18
 
 Public-preview package:
