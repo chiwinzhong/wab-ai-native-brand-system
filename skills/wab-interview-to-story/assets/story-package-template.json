@@ -1,0 +1,30 @@
+{
+  "package_version": "1.0",
+  "project": {
+    "name": "PROJECT_NAME",
+    "story_id": "STORY_ID",
+    "route": "person_story",
+    "source_language": "zh-CN",
+    "target_languages": ["zh-CN", "en"]
+  },
+  "source_register": [],
+  "evidence_ledger": [],
+  "canonical_story": {
+    "status": "draft",
+    "route_rationale": "",
+    "core_question": "",
+    "core_thesis": "",
+    "human_approval": "pending"
+  },
+  "deliverables": [],
+  "visuals": [],
+  "gates": {
+    "transcript_review": "pending",
+    "fact_and_quote_review": "pending",
+    "direction_approval": "pending",
+    "translation_review": "pending",
+    "image_rights_review": "pending",
+    "final_publication": "pending"
+  },
+  "limitations": ["Replace placeholders and complete the evidence and rights review before approval."]
+}

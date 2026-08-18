@@ -1,4 +1,4 @@
-name: Validate WAB Skill
+name: Validate WAB Skills
 
 on:
   push:
@@ -32,8 +32,22 @@ jobs:
           python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py
           examples/harbor-kiln/assessment.json
 
+      - name: Validate Interview-to-Story package
+        run: >-
+          python3 skills/wab-interview-to-story/scripts/validate_story_package.py
+          examples/interview-to-story/story-package.json
+
+      - name: Run Interview-to-Story contract tests
+        run: >-
+          python3 skills/wab-interview-to-story/scripts/run_contract_tests.py
+          examples/interview-to-story/story-package.json
+
       - name: Compile Python and parse JSON
         run: |
-          python3 -m py_compile skills/wab-diagnose-brand/scripts/*.py tools/*.py
+          python3 -m py_compile skills/wab-diagnose-brand/scripts/*.py skills/wab-interview-to-story/scripts/*.py tools/*.py
           python3 -m json.tool skills/wab-diagnose-brand/references/brand-assessment.schema.json >/dev/null
           python3 -m json.tool examples/harbor-kiln/assessment.json >/dev/null
+          python3 -m json.tool skills/wab-interview-to-story/references/story-package.schema.json >/dev/null
+          python3 -m json.tool skills/wab-interview-to-story/assets/story-package-template.json >/dev/null
+          python3 -m json.tool examples/interview-to-story/story-package.json >/dev/null
+          python3 -m json.tool case-studies/talent-association/assessment.json >/dev/null

@@ -1,0 +1,221 @@
+{
+  "assessment_version": "1.0",
+  "brand": {
+    "name": "WAB Interview-to-Story",
+    "scope": "Interview audio or notes to evidence-linked multilingual story, platform copy, and visual assets; field scope limited to 《即莞来》 and 《选择东莞》",
+    "geography": "Dongguan, Guangdong, China; designed for cross-border use"
+  },
+  "decision": "Decide whether the public proposition should lead with transcription, content repurposing, or an evidence-aware system that turns interviews into multilingual text and visual assets for different platforms.",
+  "research_status": {
+    "status": "partial",
+    "access_date": "2026-08-18",
+    "degradation_reasons": [
+      "Only the organization-authorized editorial patterns of 《即莞来》 and 《选择东莞》 are in public scope.",
+      "No raw recording, full transcript, named unpublished case, portrait, private source map, or organization-wide governance material is included.",
+      "No privacy-safe before-and-after field package or controlled comparison has been published.",
+      "No independent target-language or external-operator review has been published."
+    ]
+  },
+  "evidence_ledger": [
+    {
+      "id": "E01",
+      "type": "confirmed_fact",
+      "summary": "The public case is authorized to refer only to the editorial patterns of 《即莞来》 and 《选择东莞》.",
+      "strength": "strong",
+      "source": "Organization-approved public-case boundary",
+      "status": "supported"
+    },
+    {
+      "id": "E02",
+      "type": "confirmed_fact",
+      "summary": "The person-story route separates source intake, time-coded transcript or cleaned text, evidence indexing, editorial diagnosis, direction approval, canonical story, fact and quotation review, bilingual adaptation, and visual delivery.",
+      "strength": "strong",
+      "source": "Organization-authorized 《即莞来》 operating artifacts",
+      "status": "supported"
+    },
+    {
+      "id": "E03",
+      "type": "confirmed_fact",
+      "summary": "The person-story route treats the named person as irreplaceable and prohibits using one person's experience as group evidence.",
+      "strength": "strong",
+      "source": "Organization-authorized 《即莞来》 editorial boundaries",
+      "status": "supported"
+    },
+    {
+      "id": "E04",
+      "type": "confirmed_fact",
+      "summary": "The place/choice route uses current public and authoritative information as primary evidence, with interview material limited to a bounded case or question.",
+      "strength": "strong",
+      "source": "Organization-authorized 《选择东莞》 editorial boundaries",
+      "status": "supported"
+    },
+    {
+      "id": "E05",
+      "type": "confirmed_fact",
+      "summary": "Target-language text is naturally re-edited from an approved Chinese factual mother text while preserving certainty, agency, quotation status, and time state.",
+      "strength": "strong",
+      "source": "Organization-authorized bilingual editorial rules",
+      "status": "supported"
+    },
+    {
+      "id": "E06",
+      "type": "confirmed_fact",
+      "summary": "Visual production follows story approval and separates generative imagery from exact text, data, logos, quotations, and rights-controlled assets.",
+      "strength": "strong",
+      "source": "Organization-authorized visual production rules",
+      "status": "supported"
+    },
+    {
+      "id": "E07",
+      "type": "confirmed_fact",
+      "summary": "External sending and publication remain human-authorized actions separate from completion of the story package.",
+      "strength": "strong",
+      "source": "Organization-authorized publication boundaries",
+      "status": "supported"
+    },
+    {
+      "id": "E08",
+      "type": "confirmed_fact",
+      "summary": "The public repository contains the wab-interview-to-story Skill, evidence and route references, a machine-readable schema, a dependency-free validator, negative contract tests, and a fictional sample package.",
+      "strength": "strong",
+      "source": "Public repository artifacts",
+      "status": "supported"
+    },
+    {
+      "id": "E09",
+      "type": "gap",
+      "summary": "No privacy-safe before-and-after field package has yet been published for either route.",
+      "strength": "strong",
+      "source": "Current public evidence review",
+      "status": "missing"
+    },
+    {
+      "id": "E10",
+      "type": "gap",
+      "summary": "No independent target-language editor or external organizational operator has published a review of the same package.",
+      "strength": "strong",
+      "source": "Current public evidence review",
+      "status": "missing"
+    },
+    {
+      "id": "E11",
+      "type": "gap",
+      "summary": "No controlled comparison establishes improvements in factual accuracy, correction time, cross-channel consistency, reach, or conversion.",
+      "strength": "strong",
+      "source": "Current public evidence review",
+      "status": "missing"
+    },
+    {
+      "id": "E12",
+      "type": "agent_hypothesis",
+      "summary": "One evidence-linked canonical story can reduce factual and brand drift across language, channel, and visual derivatives compared with transcript-to-post prompting.",
+      "strength": "medium",
+      "source": "WAB exploratory assessment",
+      "status": "needs_confirmation"
+    }
+  ],
+  "lens_scores": {
+    "position_and_difference": {
+      "score": 2,
+      "rationale": "The distinction from transcription and generic content repurposing is clear, while buyer language and realistic alternatives still need external testing.",
+      "evidence_ids": ["E02", "E03", "E04", "E05", "E06", "E12"]
+    },
+    "audience_and_choice_barrier": {
+      "score": 1,
+      "rationale": "Editorial teams, associations, city brands, founders, and B2B teams are plausible users, but the first paid audience and trigger event are not yet selected.",
+      "evidence_ids": ["E09", "E10", "E11", "E12"]
+    },
+    "proof_and_credibility": {
+      "score": 1,
+      "rationale": "The operating method and runnable public contract are strong, but no redacted field transformation or independent review is yet public.",
+      "evidence_ids": ["E01", "E08", "E09", "E10", "E11"]
+    },
+    "experience_and_consistency": {
+      "score": 2,
+      "rationale": "One canonical story and explicit platform contracts create a consistent design, while live target-channel response remains untested.",
+      "evidence_ids": ["E02", "E04", "E05", "E06", "E08", "E11"]
+    },
+    "knowledge_and_workflow": {
+      "score": 3,
+      "rationale": "Evidence, route, language, channel, visual, rights, approval, and publication states are explicit and machine-checkable.",
+      "evidence_ids": ["E02", "E03", "E04", "E05", "E06", "E07", "E08"]
+    },
+    "commercial_signal_and_learning": {
+      "score": 1,
+      "rationale": "The workflow addresses a credible recurring problem, but pricing, adoption, retention, and outcome evidence are absent.",
+      "evidence_ids": ["E09", "E10", "E11", "E12"]
+    }
+  },
+  "primary_bottleneck": {
+    "lens": "proof_and_credibility",
+    "statement": "The proposition is clear and the Skill is inspectable, but the public evidence does not yet show a privacy-safe field transformation or independent review.",
+    "why_first": "Leading with reach, speed, or quality claims before publishing a reproducible source-to-output comparison would turn an evidence-aware product into another unsupported AI claim.",
+    "evidence_ids": ["E08", "E09", "E10", "E11"]
+  },
+  "differentiation_hypothesis": {
+    "statement": "Unlike transcription and content-repurposing tools, WAB Interview-to-Story establishes one evidence-linked canonical story before deriving multilingual platform copy and visual assets, using different evidence rules for person-led and place/choice stories.",
+    "gates": {
+      "true": {
+        "result": "pass",
+        "rationale": "The two field routes and public Skill contract implement the stated sequence and boundaries.",
+        "evidence_ids": ["E02", "E03", "E04", "E05", "E06", "E07", "E08"]
+      },
+      "relevant": {
+        "result": "partial",
+        "rationale": "Fragmented interview production is a plausible organizational problem, but prospective-user interviews have not yet validated priority or willingness to adopt.",
+        "evidence_ids": ["E09", "E10", "E11", "E12"]
+      },
+      "ownable": {
+        "result": "partial",
+        "rationale": "The combination is distinctive, but no structured comparison with transcription, repurposing, agency, and manual workflows has been published.",
+        "evidence_ids": ["E11", "E12"]
+      },
+      "deliverable": {
+        "result": "pass",
+        "rationale": "The Skill, schema, validator, contract tests, and fictional package are executable public artifacts.",
+        "evidence_ids": ["E08"]
+      }
+    },
+    "evidence_needed": [
+      "One redacted or consented field demonstration for each route",
+      "A prompt-only baseline using the same sources, model, channels, and time budget",
+      "Measures for unsupported claims, quotation drift, traceability, correction effort, cross-channel contradictions, and visual rework",
+      "An independent English editor review",
+      "An external organizational operator test and alternative comparison"
+    ]
+  },
+  "next_30_days": {
+    "priority": "Publish a privacy-safe, reproducible transformation package before making productivity or audience claims.",
+    "actions": [
+      "Freeze the product name, first buyer, trigger event, and exact two-route public claim.",
+      "Complete one fictional end-to-end package and one redacted demonstration for each approved route.",
+      "Run a prompt-only comparison using identical sources, model, channels, and time budget.",
+      "Record unsupported claims, quote drift, human corrections, cross-channel contradictions, production time, and visual rework.",
+      "Invite an English editor and an external organizational operator to review the package and limitations."
+    ],
+    "human_decisions": [
+      "Zhiying Zhong approves the public product positioning and bounded field claim.",
+      "The organization approves every redaction and use of a series name, article fragment, quotation, portrait, logo, or visual asset.",
+      "The interviewee or authorized rights holder approves applicable text, quotation, portrait, and platform uses.",
+      "A language reviewer approves target-language meaning before a derivative is marked approved.",
+      "A named account owner authorizes the exact publication action."
+    ],
+    "do_not_automate": [
+      "Do not infer quotations, facts, identities, current policy, or publication rights.",
+      "Do not force a person story into city promotion or use one person as group evidence.",
+      "Do not let an interview replace current authoritative sources in a place/choice story.",
+      "Do not let an English adaptation become more certain or promotional than the approved Chinese story.",
+      "Do not fabricate a person, place, event, logo, or policy fact inside a visual.",
+      "Do not publish from a completed package without explicit account-level authorization."
+    ],
+    "advance_condition": "Advance when one public-safe package for each route passes source traceability, rights, language, visual, and external-operator review and the organization approves publication."
+  },
+  "commercial_route": "enterprise_system",
+  "limitations": [
+    "The field case is organization-authorized and sponsor-led, not independent customer validation.",
+    "Only the two approved editorial patterns are public; the organization-wide operating system is out of scope.",
+    "No raw interview, named unpublished case, private source map, or internal task inventory is disclosed.",
+    "No controlled comparison establishes business, audience, quality, or efficiency effects.",
+    "Installing the open Skill does not create project-specific editorial rules, source systems, brand assets, permissions, account governance, or legal clearance."
+  ]
+}
