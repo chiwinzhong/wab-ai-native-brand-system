@@ -5,7 +5,7 @@ This ledger is designed for public review. It describes evidence categories with
 | ID | Type | Public-safe summary | Strength | Current status |
 | --- | --- | --- | --- | --- |
 | E01 | Confirmed fact | Daddy Asks is a founder-owned Chinese-language parenting content project with a formal operating source. | Strong | Supported by owner-authorized project records |
-| E02 | Conflict | The current project overview and unique ID count indicate 131 effective articles; one summary table in the article index still says 129. | Strong | Disclosed; use “100+” publicly until reconciled |
+| E02 | Count posture | Owner overview now records 141 effective articles (2026-09-12). Public wording remains “100+” / “more than 100 formal articles”; exact counts are not used as promotional headlines. | Strong | Public-safe; exact count is owner-internal context only |
 | E03 | Confirmed fact | The project has a versioned main writing rule, separate channel rules, formal source/index boundaries, task locks, review records, and publication gates. | Strong | Supported by operating artifacts |
 | E04 | Confirmed fact | The project has five reusable topic modules, a question router, multiple Skill specifications, and a discoverable Codex Skill. | Strong | Supported by operating artifacts |
 | E05 | Confirmed fact | A productization matrix maps twelve approved content assets into five modules and candidate Skill, course, book, and video uses. | Medium | Supported as system structure, not market demand |

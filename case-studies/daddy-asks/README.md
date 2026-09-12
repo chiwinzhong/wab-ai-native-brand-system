@@ -52,7 +52,7 @@ The current internal system includes:
 - reusable Skill specifications and a discoverable Codex Skill;
 - task cards, review records, version history, and human publication gates.
 
-The formal project overview currently records **131 effective articles**. A machine count of unique article IDs also returns 131, while one summary table inside the index still says 129. This case therefore uses the public-safe expression **“more than 100 formal articles”** until the stale summary is corrected. The conflict is disclosed rather than silently resolved.
+As of 2026-09-12, the owner-maintained formal project overview records **141 effective articles**. This case nevertheless keeps the conservative public-safe expression **“more than 100 formal articles”** (equivalently **“100+”**), and does not promote exact article counts, audience, efficiency, or revenue figures as independently validated marketing claims.
 
 ## Why this is AI Native
 

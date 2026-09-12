@@ -11,7 +11,7 @@
     "access_date": "2026-08-18",
     "degradation_reasons": [
       "System artifacts were reviewed from owner-authorized internal records, while performance metrics have not yet been checked against redacted primary account records.",
-      "The article index contains a disclosed 131-versus-129 summary conflict.",
+      "Public count posture remains 100+ / more than 100 formal articles; owner overview records 141 effective articles as of 2026-09-12.",
       "No controlled comparison isolates AI from publishing frequency, topic quality, platform distribution, or external events."
     ]
   },
@@ -27,7 +27,7 @@
     {
       "id": "E02",
       "type": "conflict",
-      "summary": "The current project overview and unique article-ID count indicate 131 effective articles, while one summary table in the article index still says 129.",
+      "summary": "The owner-maintained project overview records 141 effective articles as of 2026-09-12; public wording remains more than 100 formal articles without promoting exact counts.",
       "strength": "strong",
       "source": "Owner-authorized project overview and formal article index",
       "status": "conflicting"

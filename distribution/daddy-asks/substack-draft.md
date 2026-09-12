@@ -134,7 +134,7 @@ The internal operating system is more mature than the public evidence layer.
 
 I have observed promising signals in writing time, audience reach, recurring questions, collaboration interest, and early revenue. But those figures are still management-reported. They need consistent definitions, redacted source records, and a comparison design before they should carry the public story.
 
-There is even a small article-count conflict in the internal index: the current overview and unique IDs show 131, while one older summary table still says 129. So the public case says “more than 100” and discloses the conflict.
+The owner overview now records well over 100 formal articles (141 as of 2026-09-12). The public case still says “more than 100” / “100+” and does not turn exact counts into a marketing claim.
 
 This may sound overly cautious. I think it is the point.
 

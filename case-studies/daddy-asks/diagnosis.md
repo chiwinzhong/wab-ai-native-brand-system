@@ -17,7 +17,7 @@ Leading with large numbers or productivity claims would therefore make the case 
 ## Evidence boundary
 
 - Project ownership, operating rules, workflow artifacts, module structure, and Skill assets are supported by owner-authorized records.
-- The public-safe article count is “more than 100”; the current 131-versus-129 summary conflict remains disclosed.
+- The public-safe article count remains “more than 100” / “100+”; the owner overview now records 141 effective articles (2026-09-12), but exact counts stay out of promotional claims.
 - Time saving, reach, inquiries, collaboration interest, and revenue are management claims pending redacted source review.
 - No controlled comparison establishes AI as the cause of any audience or business result.
 - No child identity, family image, consultation transcript, or private message is used.
