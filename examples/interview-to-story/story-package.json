@@ -1,0 +1,123 @@
+{
+  "package_version": "1.0",
+  "project": {
+    "name": "North Harbor Makers — fictional example",
+    "story_id": "NHM-001",
+    "route": "person_story",
+    "source_language": "zh-CN",
+    "target_languages": ["zh-CN", "en"]
+  },
+  "source_register": [
+    {
+      "id": "S01",
+      "kind": "audio",
+      "locator": "private://NHM-001/interview.wav",
+      "status": "available",
+      "rights_status": "limited"
+    },
+    {
+      "id": "S02",
+      "kind": "transcript",
+      "locator": "private://NHM-001/transcript.md",
+      "status": "available",
+      "rights_status": "limited"
+    },
+    {
+      "id": "S03",
+      "kind": "public_source",
+      "locator": "https://example.com/fictional-source",
+      "status": "available",
+      "rights_status": "not_required"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "id": "E01",
+      "type": "fact",
+      "text": "The fictional interviewee changed from prototype consulting to small-batch manufacturing.",
+      "source_ids": ["S02"],
+      "locator": "transcript.md 00:08:14–00:09:02",
+      "verification": "confirmed",
+      "publication": "allowed"
+    },
+    {
+      "id": "E02",
+      "type": "direct_quote",
+      "text": "A prototype matters only when a real team can learn from making it.",
+      "source_ids": ["S01", "S02"],
+      "locator": "interview.wav 00:21:10–00:21:17",
+      "verification": "confirmed",
+      "publication": "allowed"
+    },
+    {
+      "id": "E03",
+      "type": "editorial_inference",
+      "text": "The central tension is between novelty and repeatable production.",
+      "source_ids": ["S02"],
+      "locator": "editorial diagnosis section 3",
+      "verification": "confirmed",
+      "publication": "allowed"
+    }
+  ],
+  "canonical_story": {
+    "status": "approved",
+    "route_rationale": "The named fictional maker is irreplaceable and the story depends on her specific choice and trade-off.",
+    "core_question": "Why did she choose repeatable production over a larger number of one-off prototypes?",
+    "core_thesis": "She treated manufacturing discipline as a way to learn, not as the stage after creative work.",
+    "human_approval": "approved"
+  },
+  "deliverables": [
+    {
+      "id": "D01",
+      "channel": "wechat",
+      "language": "zh-CN",
+      "format": "long_article",
+      "status": "reviewed",
+      "path": "outputs/nhm-001-wechat.md",
+      "evidence_ids": ["E01", "E02", "E03"]
+    },
+    {
+      "id": "D02",
+      "channel": "linkedin",
+      "language": "en",
+      "format": "short_post",
+      "status": "draft",
+      "path": "outputs/nhm-001-linkedin.md",
+      "evidence_ids": ["E01", "E02", "E03"]
+    },
+    {
+      "id": "D03",
+      "channel": "substack",
+      "language": "en",
+      "format": "long_article",
+      "status": "draft",
+      "path": "outputs/nhm-001-substack.md",
+      "evidence_ids": ["E01", "E02", "E03"]
+    }
+  ],
+  "visuals": [
+    {
+      "id": "V01",
+      "role": "quote_card",
+      "channel": "wechat",
+      "evidence_ids": ["E02"],
+      "method": "layout",
+      "rights_status": "confirmed",
+      "status": "reviewed",
+      "path": "outputs/nhm-001-quote-card.png"
+    }
+  ],
+  "gates": {
+    "transcript_review": "pass",
+    "fact_and_quote_review": "pass",
+    "direction_approval": "approved",
+    "translation_review": "pending",
+    "image_rights_review": "pass",
+    "final_publication": "pending"
+  },
+  "limitations": [
+    "This is a fictional contract example, not a real field result.",
+    "English derivatives remain drafts until translation review passes.",
+    "No external publication is authorized."
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "WAB Interview-to-Story"
+  short_description: "Verified interview stories for every channel"
+  default_prompt: "Use $wab-interview-to-story to turn this interview audio or transcript into a verified multilingual story package with platform copy and brand-ready visual assets."
+  icon_small: "./assets/win-logo-square.png"
+  icon_large: "./assets/win-logo-black.png"
+  brand_color: "#0A0A0A"

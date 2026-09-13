@@ -1,14 +1,14 @@
-# WAB — AI-Native Brand Diagnosis
+# WAB — AI-Native Brand System
 
 ![WAB — AI-Native Brand System](assets/github-social-preview.png)
 
 > **AI should not just create more brand content. It should make brand judgment executable.**
 
-WAB is an evidence-aware Agent Skill that turns scattered brand claims, public market signals, operating constraints, and human judgment into one prioritized decision and an action-ready brief.
+WAB is an evidence-aware AI Native brand system that turns human judgment into governed, reusable capability across diagnosis, content, visual production, and organizational learning.
 
-This repository contains the open diagnostic layer of the broader **W AI Branding (WAB)** system.
+This repository contains two open Agent Skills from the broader **W AI Branding (WAB)** system: brand diagnosis and interview-to-story production.
 
-**Status:** Public preview · synthetic contract validation plus one owner-authorized exploratory field case · no claim of independent business-result validation
+**Status:** Public preview · two runnable Agent Skills · synthetic contract validation · two authorized exploratory field cases · no claim of independently validated business results
 
 ## The problem
 
@@ -23,7 +23,9 @@ The result is faster inconsistency.
 
 WAB starts one layer earlier: **What decision must the organization make, what evidence supports it, and what should remain under human authority?**
 
-## What the open Skill does
+## What the open Skills do
+
+### WAB Brand Diagnosis
 
 `wab-diagnose-brand` works on one brand and one consequential decision. It produces:
 
@@ -38,19 +40,34 @@ WAB starts one layer earlier: **What decision must the organization make, what e
 
 It supports English and Chinese.
 
-## Why it is AI Native
+### WAB Interview-to-Story
 
-WAB is not a static questionnaire and not a prompt that asks a model to “act like a strategist.” It packages a governed operating method:
+`wab-interview-to-story` turns interview audio, transcripts, notes, and approved public sources into one governed content package. It produces:
+
+1. a source register and time-coded transcript status;
+2. an evidence and quotation ledger;
+3. a person-story or place/choice route;
+4. one canonical story before channel adaptation;
+5. natural multilingual editions;
+6. platform-specific text for domestic and international channels;
+7. visual briefs and, when tools and rights permit, brand-ready cards or posters;
+8. explicit fact, translation, image-rights, and publication gates;
+9. a machine-readable package that can be validated.
+
+It is designed for editorial teams, associations, city brands, founders, research groups, and B2B organizations that need one interview to become many assets without creating many versions of the truth.
+
+## Why this is AI Native
+
+WAB is not a static questionnaire and not a prompt that asks a model to “act like a strategist.” It packages governed operating methods:
 
 ```mermaid
 flowchart LR
-    A["Brand decision"] --> B["Evidence ledger"]
-    B --> C["Six-lens diagnosis"]
-    C --> D["Primary bottleneck"]
-    D --> E["Differentiation gates"]
-    E --> F["30-day decision path"]
-    F --> G["Human approval"]
-    G --> H["Reusable learning"]
+    A["Brand decision or interview source"] --> B["Evidence ledger"]
+    B --> C["Diagnosis or story route"]
+    C --> D["Approved decision or canonical story"]
+    D --> E["Action, platform, and visual derivatives"]
+    E --> F["Human approval"]
+    F --> G["Reusable learning"]
 ```
 
 - **Evidence-aware:** facts, public observations, management claims, customer signals, hypotheses, conflicts, and gaps are not mixed together.
@@ -72,12 +89,25 @@ skills/wab-diagnose-brand/
 ├── scripts/
 ├── references/
 └── assets/
+
+skills/wab-interview-to-story/
+├── SKILL.md
+├── agents/openai.yaml
+├── scripts/
+├── references/
+└── assets/
 ```
 
 Then invoke it with a request such as:
 
 ```text
 Use $wab-diagnose-brand to diagnose why our B2B brand produces content consistently but is still compared mainly on price. Separate confirmed facts from assumptions and give us one 30-day priority.
+```
+
+For an interview-to-story package, install `skills/wab-interview-to-story/` and invoke:
+
+```text
+Use $wab-interview-to-story to turn this interview recording into a verified Chinese canonical story, a natural English edition, LinkedIn and Substack drafts, and a brand-ready quotation card. Keep quotations source-linked and stop before publication.
 ```
 
 ### Validate structured output
@@ -104,6 +134,16 @@ python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py \
   examples/harbor-kiln/assessment.json
 ```
 
+Validate the synthetic Interview-to-Story package and its negative tests:
+
+```bash
+python3 skills/wab-interview-to-story/scripts/validate_story_package.py \
+  examples/interview-to-story/story-package.json
+
+python3 skills/wab-interview-to-story/scripts/run_contract_tests.py \
+  examples/interview-to-story/story-package.json
+```
+
 ## Examples and exploratory cases
 
 The repository includes a fully synthetic example for **Harbor Kiln**, a fictional commercial tableware brand. It demonstrates the data contract without exposing a real customer, private evidence, or invented market results.
@@ -116,6 +156,12 @@ The first owner-authorized exploratory case examines **Daddy Asks**, a founder-o
 - [Exploratory field case](case-studies/daddy-asks/README.md)
 - [Evidence and privacy boundary](case-studies/daddy-asks/evidence-boundary.md)
 - [Machine-readable assessment](case-studies/daddy-asks/assessment.json)
+
+The second exploratory case is limited to two editorial series of **东莞市人才资源发展促进会**: 《即莞来》 and 《选择东莞》. It shows how interview audio or notes can become an evidence-linked canonical story, natural Chinese and English editions, platform-specific text, and brand-ready visual assets while facts, quotations, rights, and publication remain human-governed.
+
+- [Exploratory field case](case-studies/talent-association/README.md)
+- [Evidence and privacy boundary](case-studies/talent-association/evidence-boundary.md)
+- [Machine-readable assessment](case-studies/talent-association/assessment.json)
 
 ## Six diagnostic lenses
 
@@ -134,13 +180,14 @@ Scores are not averaged into a vanity grade. The purpose is to locate the curren
 
 ```mermaid
 flowchart TB
-    O["Open Skill\nEvidence-aware diagnosis"] --> P["WAB Professional\nResearch, interviews, client-ready diagnosis"]
+    O1["Open Skill\nEvidence-aware diagnosis"] --> P["WAB Professional\nResearch, interviews, client-ready systems"]
+    O2["Open Skill\nInterview-to-story production"] --> P
     P --> E["WAB Enterprise\nGoverned brand knowledge and recurring execution"]
 ```
 
 ### Open Skill
 
-For a bounded decision that can be assessed with available evidence. Use it to structure the problem, expose uncertainty, and design the next validation step.
+For a bounded diagnosis or story package that can be completed with available evidence. Use the open Skills to structure the problem, expose uncertainty, and produce a validated next-step or content package.
 
 ### WAB Professional
 
@@ -186,13 +233,22 @@ The public validation method is documented in [Evaluation protocol](docs/evaluat
 │   ├── evaluation.md
 │   └── security-and-privacy.md
 ├── examples/
-│   └── harbor-kiln/
+│   ├── harbor-kiln/
+│   └── interview-to-story/
 ├── case-studies/
-│   └── daddy-asks/
+│   ├── daddy-asks/
+│   └── talent-association/
 ├── distribution/
-│   └── daddy-asks/
+│   ├── daddy-asks/
+│   └── talent-association/
 └── skills/
-    └── wab-diagnose-brand/
+    ├── wab-diagnose-brand/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   ├── assets/
+    │   ├── references/
+    │   └── scripts/
+    └── wab-interview-to-story/
         ├── SKILL.md
         ├── agents/openai.yaml
         ├── assets/
@@ -202,11 +258,11 @@ The public validation method is documented in [Evaluation protocol](docs/evaluat
 
 ## Release and evidence status
 
-Version 0.1.0 has been released with structured schemas, failure gates, and synthetic end-to-end tests. The Daddy Asks package adds an owner-authorized exploratory field case, but it is not independent customer or business-impact validation.
+Version 0.1.0 released the brand-diagnosis Skill. The current unreleased package adds a second runnable Skill, `wab-interview-to-story`, with its own schema, validator, negative contract tests, and fictional example. The Daddy Asks and two-series interview field packages add owner- or organization-authorized exploratory evidence, but neither is independent customer or business-impact validation.
 
 Until independently reviewed field evidence is documented, describe the project as:
 
-> An open, evidence-aware brand-diagnosis Skill in public preview, available for critique and field validation.
+> An open, evidence-aware AI Native brand system in public preview, with runnable diagnosis and interview-to-story Skills available for critique and field validation.
 
 Do not describe it as academically validated, universally applicable, or proven to improve business performance.
 
