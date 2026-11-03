@@ -6,7 +6,7 @@
 
 WAB is an evidence-aware Agent Skill that turns scattered brand claims, public market signals, operating constraints, and human judgment into one prioritized decision and an action-ready brief.
 
-This repository contains the open diagnostic layer of the broader **W AI Branding (WAB)** system.
+This repository contains the open diagnostic layer of the broader **W AI Branding (WAB)** system, plus generic source-aware website and editorial-publication review workflows.
 
 **Status:** Public preview · synthetic contract validation plus one owner-authorized exploratory field case · no claim of independent business-result validation
 
@@ -37,6 +37,8 @@ WAB starts one layer earlier: **What decision must the organization make, what e
 8. a route to self-serve validation, professional diagnosis, or an enterprise system.
 
 It supports English and Chinese.
+
+When an authorized brand brief already exists, the same Skill can also prepare a **website** or **magazine/internal-publication review proof** without forcing a new diagnosis. These opt-in modes do not expose private WAB delivery methods or install an enterprise system.
 
 ## Why it is AI Native
 
@@ -103,6 +105,44 @@ Run the contract test suite:
 python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py \
   examples/harbor-kiln/assessment.json
 ```
+
+### Build a website or magazine review proof
+
+The production helper uses the Python standard library. From this repository root:
+
+```bash
+python3 skills/wab-diagnose-brand/scripts/render_brand_deliverable.py \
+  --brief skills/wab-diagnose-brand/assets/production/demo-brief.json \
+  --kind website --output .tmp/harbor-kiln-website.html
+
+python3 skills/wab-diagnose-brand/scripts/render_brand_deliverable.py \
+  --brief skills/wab-diagnose-brand/assets/production/demo-brief.json \
+  --kind publication --output .tmp/harbor-kiln-magazine.html
+
+python3 skills/wab-diagnose-brand/scripts/test_production.py
+```
+
+Open the resulting HTML files in a browser. Choose a fresh output path or explicitly add `--overwrite` when regenerating an existing proof. Source briefs and registered assets cannot be overwritten by the helper.
+
+- **Website workflow:** source/content map, visitor journey, template adaptation, actual interactions, desktop/mobile QA, real contact state, review handoff and separate release authority. [Workflow](skills/wab-diagnose-brand/references/website-workflow.md)
+- **Publication workflow:** issue proposition, article/page plan, editing, visual hierarchy, credits/permissions, rendered-page QA and digital/print handoff. [Workflow](skills/wab-diagnose-brand/references/publication-workflow.md)
+- **Shared contract:** source classifications, rights, versioned approval and safe local assets. [Production brief and limits](skills/wab-diagnose-brand/references/production-contract.md)
+
+The helper creates a responsive **single-file website proof** or an ordered **HTML magazine proof** with print CSS, sources and folios. It does **not** deploy, create a CMS, submit forms, collect data, grant public release, certify a press-ready PDF or guarantee business results. Use the actual site/layout tools for those requirements and report what was really verified.
+
+### Original visual references
+
+These are original **layout illustrations for fictional Harbor Kiln**, not browser screenshots, real publications, product photographs or customer results. The demo brief, SVG and references are bundled inside the Skill so an installed copy is self-contained. Read the [asset-rights register](skills/wab-diagnose-brand/assets/production/rights.json) before reuse; WIN/WAB trademark exclusions remain unchanged.
+
+| Website / desktop | Website / mobile |
+| --- | --- |
+| ![Original fictional desktop layout reference](skills/wab-diagnose-brand/assets/production/website-desktop-reference.png) | ![Original fictional mobile layout reference](skills/wab-diagnose-brand/assets/production/website-mobile-reference.png) |
+
+| Magazine / cover | Magazine / facing pages |
+| --- | --- |
+| ![Original fictional magazine cover reference](skills/wab-diagnose-brand/assets/production/magazine-cover-reference.png) | ![Original fictional magazine spread reference](skills/wab-diagnose-brand/assets/production/magazine-spread-reference.png) |
+
+The example's proposed copy and illustrated forms do not resolve the evidence gaps in the original Harbor Kiln diagnosis. No comparative durability or sustainability claim is promoted to a real product fact.
 
 ## Examples and exploratory cases
 
@@ -202,7 +242,7 @@ The public validation method is documented in [Evaluation protocol](docs/evaluat
 
 ## Release and evidence status
 
-Version 0.1.0 has been released with structured schemas, failure gates, and synthetic end-to-end tests. The Daddy Asks package adds an owner-authorized exploratory field case, but it is not independent customer or business-impact validation.
+Version 0.1.0 has been released with structured schemas, failure gates, and synthetic end-to-end tests. The Daddy Asks package adds an owner-authorized exploratory field case, but it is not independent customer or business-impact validation. The unreleased website/publication extension adds generic workflows, a local proof helper and synthetic production tests; it is not a new tagged release or validated client deployment.
 
 Until independently reviewed field evidence is documented, describe the project as:
 
@@ -228,4 +268,11 @@ The license does not grant permission to use WIN or WAB names, logos, visual ide
 
 WAB不是“帮企业多生成内容”的Prompt，而是一套先判断真实品牌问题、区分事实与假设、选择一个关键瓶颈，并明确人工责任与下一步行动的AI原生品牌诊断Skill。
 
-当前仓库公开的是可运行的诊断入口；完整调研、管理层深访、专业报告、企业品牌知识和持续内容视觉系统属于WAB专业与企业服务层。
+当前仓库公开的是可运行的诊断入口，并补充网站、杂志／内刊的通用制作流程、来源与素材权限契约、可运行HTML预览脚本和原创虚构参考图。已有确认的品牌简报可直接进入相应制作模式，不必重做诊断。预览不是上线、获准公开发行或印前认证。
+
+可直接这样调用：
+
+- `使用 $wab-diagnose-brand，把我提供且获准使用的品牌资料做成公司网站。先给页面结构、来源对应表、可预览成品和桌面／手机检查结果；没有接通的联系入口明确标注。`
+- `使用 $wab-diagnose-brand，把这些已授权稿件做成一期品牌杂志。保留署名和来源，完成选题、目录、页序、排版预览及逐页检查；印刷版与屏幕版分开交接。`
+
+完整调研、管理层深访、私有专业报告、企业品牌知识和持续内容视觉系统仍属于WAB专业与企业服务层；本次没有公开客户或协会内部资料。

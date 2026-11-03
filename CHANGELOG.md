@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### Website and publication review workflows — 2026-11-03
+
+- extend the existing Skill with opt-in website and magazine/internal-publication modes, preserving diagnosis behavior and its assessment schema;
+- add source/rights-aware production briefs and a dependency-free standalone HTML proof renderer;
+- add a fictional Harbor Kiln website and six-page editorial example, original SVG illustration, four labeled layout-reference PNGs, and a rights register;
+- add production safety/behavior tests and CI coverage; keep deployment, public distribution and press-ready certification outside the helper's capabilities;
+- publish only generic public workflows and synthetic material, not private WAB production methods or customer/association archives.
+
 - add the owner-authorized Daddy Asks exploratory field case;
 - add a public evidence and privacy boundary;
 - add a schema-valid machine-readable WAB assessment;

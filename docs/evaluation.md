@@ -1,5 +1,13 @@
 # Evaluation protocol
 
+## Website and publication proof extension
+
+Run `python3 skills/wab-diagnose-brand/scripts/test_production.py` for the production contract and local HTML helper. It exercises both actual render paths, embedded assets, page order/folios, source classification, pending/restricted rights, duplicate/unknown references, path and symlink escape, active/external SVG content, escaping, synthetic labeling, explicit content review, release separation and source-file overwrite protection.
+
+These checks validate observable structural and safety behavior, not semantic truth, legal ownership, actual desktop/mobile rendering, print pagination, CMYK, image resolution or business outcomes. For real work, also inspect the rendered website at representative desktop/mobile widths and every publication page, and retain the current human review and release records. Optional layout-reference regeneration requires Pillow; the proof helper and its tests do not.
+
+The four new PNGs are original synthetic layout illustrations, not screenshots or independent field evidence. Do not count them as validated customer implementations.
+
 WAB should be evaluated as a decision and governance system, not by how much text it generates.
 
 ## Unit of evaluation

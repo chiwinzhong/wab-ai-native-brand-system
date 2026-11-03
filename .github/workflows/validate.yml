@@ -32,8 +32,13 @@ jobs:
           python3 skills/wab-diagnose-brand/scripts/run_contract_tests.py
           examples/harbor-kiln/assessment.json
 
+      - name: Run website and publication proof tests
+        run: python3 skills/wab-diagnose-brand/scripts/test_production.py
+
       - name: Compile Python and parse JSON
         run: |
           python3 -m py_compile skills/wab-diagnose-brand/scripts/*.py tools/*.py
           python3 -m json.tool skills/wab-diagnose-brand/references/brand-assessment.schema.json >/dev/null
           python3 -m json.tool examples/harbor-kiln/assessment.json >/dev/null
+          python3 -m json.tool skills/wab-diagnose-brand/references/production-brief.schema.json >/dev/null
+          python3 -m json.tool skills/wab-diagnose-brand/assets/production/demo-brief.json >/dev/null

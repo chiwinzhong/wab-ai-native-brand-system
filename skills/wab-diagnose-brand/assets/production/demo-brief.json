@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "mode": "both",
+  "is_synthetic": true,
+  "brand": {
+    "name": "Harbor Kiln",
+    "audience": "Fictional independent restaurant buyers",
+    "objective": "Review a proposed serviceware story without promoting unsupported durability or sustainability claims",
+    "approved_brief_ref": "synthetic:harbor-kiln/demo-layout-brief",
+    "language": "en",
+    "palette": {"ink": "#24211F", "paper": "#F4EFE7", "accent": "#8C4C35"}
+  },
+  "evidence": [
+    {"id": "F01", "statement": "Harbor Kiln is fictional; all material in this production example is synthetic.", "classification": "synthetic", "source_ref": "synthetic:harbor-kiln/demo-definition", "as_of": "2026-11-03", "public_use": "allowed"},
+    {"id": "F02", "statement": "The illustration depicts a fictional plate, bowl and cup, not tested products.", "classification": "synthetic", "source_ref": "synthetic:harbor-kiln/ceramics-illustration", "as_of": "2026-11-03", "public_use": "allowed"},
+    {"id": "F03", "statement": "This example contains no verified durability, sustainability or business-performance evidence.", "classification": "synthetic", "source_ref": "synthetic:harbor-kiln/evidence-limit", "as_of": "2026-11-03", "public_use": "allowed"}
+  ],
+  "assets": [
+    {"id": "A01", "path": "ceramics.svg", "alt": "Original vector illustration of a fictional ceramic plate, bowl and cup; not a product photograph", "credit": "Original synthetic illustration for the WAB public example", "permission_ref": "Apache-2.0; see rights.json and repository LICENSE", "public_use": "allowed"}
+  ],
+  "review": {"content_status": "draft", "reviewer": "", "reviewed_at": "", "record_ref": "", "public_release": "not_granted"},
+  "website": {
+    "pages": [
+      {"id": "home", "role": "section", "headline": "A tableware story worth inspecting.", "standfirst": "A proposed website for a fictional restaurant-serviceware brand.", "paragraphs": [{"kind": "fact", "text": "Harbor Kiln is a fictional brand. This is a synthetic review proof, not a real customer site.", "evidence_ids": ["F01"]}, {"kind": "editorial", "text": "Begin with the buyer's practical questions: what needs to match, what must be documented, and who confirms the result?", "evidence_ids": []}], "asset_ids": ["A01"]},
+      {"id": "collection", "role": "section", "headline": "Three forms. One visual conversation.", "standfirst": "Plate, bowl and cup are shown as illustrative forms only.", "paragraphs": [{"kind": "fact", "text": "The drawing contains three fictional forms and is not a photograph or product specification.", "evidence_ids": ["F02"]}, {"kind": "placeholder", "text": "Before any real product page: add approved dimensions, materials, care guidance, availability and evidence for any performance claim.", "evidence_ids": []}], "asset_ids": ["A01"]},
+      {"id": "proof", "role": "section", "headline": "Make the proof visible before making the promise.", "standfirst": "A reviewable boundary is more useful than an invented testimonial.", "paragraphs": [{"kind": "fact", "text": "This example includes no verified durability, environmental or business-performance results.", "evidence_ids": ["F03"]}, {"kind": "editorial", "text": "For a real project, assign a source owner, verify each claim, clear the images and connect an actual contact channel before release.", "evidence_ids": []}], "asset_ids": []}
+    ]
+  },
+  "publication": {
+    "title": "Harbor Notes",
+    "issue_label": "Demonstration issue / not a registered or released publication",
+    "trim_width_mm": 210,
+    "trim_height_mm": 285,
+    "bleed_mm": 3,
+    "pages": [
+      {"id": "cover", "role": "cover", "headline": "At the table.", "standfirst": "Harbor Notes / a fictional editorial study", "paragraphs": [{"kind": "fact", "text": "A synthetic design example. Harbor Kiln is not a customer case.", "evidence_ids": ["F01"]}], "asset_ids": ["A01"]},
+      {"id": "contents", "role": "contents", "headline": "Inside this demonstration.", "standfirst": "One issue proposition, a coherent reading sequence.", "paragraphs": [{"kind": "editorial", "text": "Use an issue to connect a reader's question, an editorial idea, visible material and a clear evidence boundary.", "evidence_ids": []}], "asset_ids": []},
+      {"id": "feature", "role": "feature", "headline": "Begin with the working table.", "standfirst": "A feature opening is not a catalogue of empty adjectives.", "paragraphs": [{"kind": "editorial", "text": "Proposed editorial angle: ask how a restaurant team would evaluate visual consistency and replacement needs. Interview answers and operating results must come from authorized sources, not this example.", "evidence_ids": []}, {"kind": "fact", "text": "The plate, bowl and cup below are original fictional illustrations, not tested products.", "evidence_ids": ["F02"]}], "asset_ids": ["A01"]},
+      {"id": "evidence", "role": "feature", "headline": "What the image cannot prove.", "standfirst": "Separate visual expression from measured capability.", "paragraphs": [{"kind": "fact", "text": "No verified durability, sustainability or commercial results are supplied in this example.", "evidence_ids": ["F03"]}, {"kind": "placeholder", "text": "A real issue needs source references for every performance claim, explicit quote approval, product details and image permissions.", "evidence_ids": []}], "asset_ids": []},
+      {"id": "workflow", "role": "feature", "headline": "From source to spread.", "standfirst": "A repeatable editorial handoff.", "paragraphs": [{"kind": "editorial", "text": "Source review, issue proposition, page plan, copy edit, visual proof, page-level QA and named release approval are separate decisions.", "evidence_ids": []}, {"kind": "editorial", "text": "For printing, agree trim, binding, bleed, color, fonts and image resolution with the production reviewer. A screen proof is not a press-ready PDF.", "evidence_ids": []}], "asset_ids": []},
+      {"id": "credits", "role": "closing", "headline": "A proof, not a publication claim.", "standfirst": "Credits and next decisions", "paragraphs": [{"kind": "fact", "text": "All material in this Harbor Kiln production example is synthetic.", "evidence_ids": ["F01"]}, {"kind": "editorial", "text": "Illustration and layout references: original public example assets, Apache 2.0. No WIN/WAB trademark license, customer endorsement or distribution permission is implied. Review rights.json and the repository license.", "evidence_ids": []}], "asset_ids": []}
+    ]
+  }
+}

@@ -26,9 +26,27 @@ def main():
         SKILL / "assets" / "win-logo-black.png",
         SKILL / "assets" / "win-logo-square.png",
     ]
+    production = [
+        SKILL / "references" / "website-workflow.md",
+        SKILL / "references" / "publication-workflow.md",
+        SKILL / "references" / "production-contract.md",
+        SKILL / "references" / "production-brief.schema.json",
+        SKILL / "scripts" / "render_brand_deliverable.py",
+        SKILL / "scripts" / "test_production.py",
+        SKILL / "assets" / "production" / "demo-brief.json",
+        SKILL / "assets" / "production" / "rights.json",
+        SKILL / "assets" / "production" / "ceramics.svg",
+    ]
+    for name in ["website-desktop-reference.png", "website-mobile-reference.png", "magazine-cover-reference.png", "magazine-spread-reference.png"]:
+        production.append(SKILL / "assets" / "production" / name)
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
     if missing:
         fail(f"missing required files: {missing}")
+    for path in production:
+        if not path.is_file():
+            fail(f"missing production resource: {path.relative_to(ROOT)}")
+        if path.suffix == ".png" and path.read_bytes()[:8] != b"\x89PNG\r\n\x1a\n":
+            fail(f"invalid production PNG: {path.name}")
 
     content = SKILL_MD.read_text(encoding="utf-8")
     if not content.startswith("---\n"):
@@ -65,6 +83,7 @@ def main():
     print(f"Name: {values['name']}")
     print(f"SKILL.md lines: {len(content.splitlines())}")
     print(f"Required files: {len(required)}/{len(required)}")
+    print(f"Production resources: {len(production)}/{len(production)}")
 
 
 if __name__ == "__main__":

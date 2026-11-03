@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WAB public website/publication review brief",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "mode", "is_synthetic", "brand", "evidence", "assets", "review"],
+  "properties": {
+    "version": {"const": "1.0"},
+    "mode": {"enum": ["website", "publication", "both"]},
+    "is_synthetic": {"type": "boolean"},
+    "brand": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "audience", "objective", "approved_brief_ref", "language", "palette"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "audience": {"type": "string", "minLength": 1},
+        "objective": {"type": "string", "minLength": 1},
+        "approved_brief_ref": {"type": "string", "minLength": 1},
+        "language": {"enum": ["en", "zh-CN", "zh-HK"]},
+        "palette": {
+          "type": "object", "additionalProperties": false,
+          "required": ["ink", "paper", "accent"],
+          "properties": {
+            "ink": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "paper": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "accent": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"}
+          }
+        }
+      }
+    },
+    "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["content_status", "reviewer", "reviewed_at", "record_ref", "public_release"],
+      "properties": {
+        "content_status": {"enum": ["draft", "approved"]},
+        "reviewer": {"type": "string"},
+        "reviewed_at": {"type": "string"},
+        "record_ref": {"type": "string"},
+        "public_release": {"const": "not_granted"}
+      }
+    },
+    "website": {
+      "type": "object", "additionalProperties": false, "required": ["pages"],
+      "properties": {"pages": {"type": "array", "minItems": 1, "maxItems": 30, "items": {"$ref": "#/$defs/page"}}}
+    },
+    "publication": {
+      "type": "object", "additionalProperties": false,
+      "required": ["title", "issue_label", "trim_width_mm", "trim_height_mm", "bleed_mm", "pages"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "issue_label": {"type": "string", "minLength": 1},
+        "trim_width_mm": {"type": "number", "minimum": 100, "maximum": 420},
+        "trim_height_mm": {"type": "number", "minimum": 100, "maximum": 594},
+        "bleed_mm": {"type": "number", "minimum": 0, "maximum": 10},
+        "pages": {"type": "array", "minItems": 1, "maxItems": 200, "items": {"$ref": "#/$defs/page"}}
+      }
+    }
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
+    "ids": {"type": "array", "items": {"$ref": "#/$defs/id"}},
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "statement", "classification", "source_ref", "as_of", "public_use"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "statement": {"type": "string", "minLength": 1},
+        "classification": {"enum": ["confirmed_fact", "public_observation", "management_claim", "recommendation", "synthetic"]},
+        "source_ref": {"type": "string", "minLength": 1}, "as_of": {"type": "string", "minLength": 1},
+        "public_use": {"enum": ["allowed", "pending", "restricted"]}
+      }
+    },
+    "asset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "path", "alt", "credit", "permission_ref", "public_use"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "path": {"type": "string", "minLength": 1},
+        "alt": {"type": "string", "minLength": 1}, "credit": {"type": "string", "minLength": 1},
+        "permission_ref": {"type": "string", "minLength": 1},
+        "public_use": {"enum": ["allowed", "pending", "restricted"]}
+      }
+    },
+    "paragraph": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "text", "evidence_ids"],
+      "properties": {
+        "kind": {"enum": ["fact", "observation", "editorial", "placeholder"]},
+        "text": {"type": "string", "minLength": 1}, "evidence_ids": {"$ref": "#/$defs/ids"}
+      }
+    },
+    "page": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "role", "headline", "standfirst", "paragraphs", "asset_ids"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "role": {"enum": ["section", "cover", "contents", "editorial", "feature", "closing"]},
+        "headline": {"type": "string", "minLength": 1}, "standfirst": {"type": "string"},
+        "paragraphs": {"type": "array", "items": {"$ref": "#/$defs/paragraph"}},
+        "asset_ids": {"$ref": "#/$defs/ids"}
+      }
+    }
+  }
+}

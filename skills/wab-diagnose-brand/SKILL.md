@@ -1,13 +1,22 @@
 ---
 name: wab-diagnose-brand
-description: Run an evidence-aware, AI-native diagnosis for one brand and one consequential brand decision. Use when a founder, operator, marketing lead, consultant, or agent asks to identify the real brand bottleneck, assess positioning and differentiation, compare company claims with public market signals, decide what to do in the next 30 days, prepare a governed brand brief, or determine whether the problem needs a one-off deliverable or a deeper brand operating system. Supports English and Chinese. Do not use it to invent customer facts, promise business results, publish content, operate accounts, or replace legal review.
+description: Diagnose one brand decision using evidence, or turn an authorized brand brief into a reviewable website, magazine, internal publication, or company brochure. Use for brand bottlenecks, positioning, proof, a 30-day priority, brand websites, digital magazines, editorial page plans, and source-aware production handoffs. Supports English and Chinese. Separate diagnosis from production; do not restart an approved strategy. Do not invent customer facts, promise results, publish, operate accounts, claim press-ready output, or replace human rights and legal review.
 ---
 
-# WAB Brand Diagnosis
+# WAB Brand Diagnosis & Production Proofs
 
 Diagnose before generating. Turn scattered brand claims, public signals, operating constraints, and human judgment into one prioritized decision and an auditable next-step brief.
 
-## Non-negotiable outcome
+## Choose the current mode
+
+- **Diagnosis:** use the eight steps below when the consequential brand decision is unresolved.
+- **Website:** when the user asks for a company site, brand site, landing page, or approved website revision, read [website-workflow.md](references/website-workflow.md). Reuse the approved decision and sources; do not force a new diagnosis questionnaire.
+- **Publication:** for a magazine, internal journal, annual issue, editorial brochure, or company booklet, read [publication-workflow.md](references/publication-workflow.md). Treat it as an editorial sequence, not web copy split into equal pages.
+- **Both:** maintain one source and rights register, but create separate website journeys and publication page plans. Read both references only for a combined request.
+
+These are generic public production workflows, not the private WAB question tree, client report pipeline, or enterprise operating system. A proposed positioning statement is not a factual source. With missing approvals, produce a visibly marked draft, layout, or specific gap list; exclude restricted facts and assets instead of silently treating them as public.
+
+## Non-negotiable outcome — diagnosis mode
 
 Produce all of the following:
 
@@ -146,3 +155,21 @@ Before delivering, verify:
 - the 30-day path contains human decision owners;
 - no business result is guaranteed;
 - no private WAB method, customer data, or hidden reasoning is exposed.
+
+## Reviewable website and publication outputs
+
+Use the production references for the complete input, sequence, handoff, and human gates. Keep the existing assessment schema for diagnosis only. For website/publication work use [production-brief.schema.json](references/production-brief.schema.json) and the source/rights rules in [production-contract.md](references/production-contract.md).
+
+The bundled helper renders **standalone HTML review proofs**, not deployed websites, a CMS, a print-certified PDF, or autonomous publication. It performs no network requests and no account actions:
+
+```bash
+python3 scripts/render_brand_deliverable.py \
+  --brief assets/production/demo-brief.json --kind website --output website-review.html
+python3 scripts/render_brand_deliverable.py \
+  --brief assets/production/demo-brief.json --kind publication --output magazine-review.html
+python3 scripts/test_production.py
+```
+
+Paths in these commands are relative to the installed Skill folder. Read [assets/production/rights.json](assets/production/rights.json) before reusing the fictional Harbor Kiln illustrations and layout references. The reference PNGs are labeled layout illustrations, not browser screenshots or client results. Use another brand's actual identity and authorized material when producing its deliverable; do not apply WIN/WAB marks as a third-party brand.
+
+For a real website, use the environment's available website workflow, preserve the requested template and existing hosting identity, and verify desktop/mobile behavior and real contact actions. For a real publication, use the actual document/layout workflow, inspect every rendered page, and obtain human editorial and production approval. Preparation, preview, public release, sending, printing, and paid distribution are distinct actions; this Skill supplies none of those permissions by itself.
