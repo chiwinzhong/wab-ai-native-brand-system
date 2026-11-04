@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "date": "2026-11-03",
+  "scope": "Original synthetic materials created for this public repository update",
+  "license": "Apache-2.0; see the repository LICENSE and NOTICE",
+  "files": [
+    {"path": "ceramics.svg", "kind": "original_vector_illustration", "subject": "Fictional plate, bowl and cup"},
+    {"path": "website-desktop-reference.png", "kind": "original_layout_illustration", "subject": "Desktop website composition"},
+    {"path": "website-mobile-reference.png", "kind": "original_layout_illustration", "subject": "Mobile website composition"},
+    {"path": "magazine-cover-reference.png", "kind": "original_layout_illustration", "subject": "Editorial cover composition"},
+    {"path": "magazine-spread-reference.png", "kind": "original_layout_illustration", "subject": "Facing-page feature composition"}
+  ],
+  "not_included": ["Real customer content", "Association internal materials", "Third-party photographs", "Personal information", "WIN/WAB marks in the new examples", "Redistributed font files"],
+  "required_context": "Harbor Kiln is fictional. Reference PNGs are layout illustrations, not browser screenshots, actual publications, tested products, testimonials or performance evidence.",
+  "font_use": "Reference PNG text is rasterized from a locally available font or Pillow default; no font software is distributed. Review the chosen font license if regenerating for a different use.",
+  "trademarks": "The repository's WIN/WAB trademark exclusions remain in force. These examples do not authorize another service to represent itself as WAB.",
+  "regenerate": "Optional: install Pillow and run python3 tools/render_production_references.py from the repository root. The HTML renderer itself uses only the Python standard library."
+}

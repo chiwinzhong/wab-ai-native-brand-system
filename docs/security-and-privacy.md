@@ -1,5 +1,13 @@
 # Security and privacy
 
+## Public website and publication proofs
+
+Keep customer/association source archives out of this repository. The new demo uses only fictional Harbor Kiln copy and original illustrations; it grants no additional WIN/WAB trademark rights.
+
+The production renderer performs no network or account actions. Used evidence/assets must be marked for allowed public use; unused restricted evidence is omitted from the output appendix. Asset paths stay under an explicitly selected local root; parent traversal, absolute paths, symlink escape and remote image URLs are rejected. Text is escaped and SVGs with scripts, events or external content are rejected. These controls do not prove that a source is true or that a submitter owns the material: a human must review the actual copy, images, permissions and intended distribution.
+
+Generated HTML is a draft, not authorization to host, send, print, collect data or update official knowledge. `noindex` is not access control. Use actual private hosting for restricted previews and keep publication/printing approval separate.
+
 ## Default posture
 
 Use public or explicitly authorized information only. Minimize collection. Keep each customer or assessment isolated. Do not make external changes without human authorization.

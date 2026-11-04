@@ -19,6 +19,12 @@ The open Skill performs no production-account writes and stores no customer data
 9. human-approval and automation boundaries;
 10. structured handoff.
 
+## Optional public production proofs
+
+An approved brief can route to a website or editorial-publication mode without repeating diagnosis. These modes use a separate production contract: scoped brand/audience/decision, source and asset-rights records, page plans, visible review state, and a human-controlled release handoff. The bundled standard-library helper renders local standalone HTML only; it does not connect accounts, deploy a website, collect data, print, or certify a press-ready PDF.
+
+These generic public proof workflows do not publish the private WAB question tree, professional report pipeline or enterprise system. Diagnosis records and production briefs remain separate. A source-aware layout is not proof of the underlying claims or ownership.
+
 ## Professional layer
 
 The professional layer is operated by WAB and may add proprietary question selection, management interviews, evidence reconciliation, report production, human review, and facilitation. It is not included in the open repository.
